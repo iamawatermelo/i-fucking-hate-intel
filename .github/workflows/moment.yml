@@ -17,8 +17,8 @@ jobs:
           ls ${{ github.workspace }}
       - name: Extract the stupid fucking thing I hate Intel so goddamn much
         run: |
-          ${{ github.workspace }}\stupid_fucking_installer.exe -extractdrivers SetupRST_extracted
+          ${{ github.workspace }}\stupid_fucking_installer.exe -extractdrivers ${{ github.workspace }}\SetupRST_extracted
       - uses: actions/upload-artifact@v4
         with:
           name: my-artifact
-          path: ${{ github.workspace }}\SetupRST_extracted
+          path: ${{ github.workspace }}
